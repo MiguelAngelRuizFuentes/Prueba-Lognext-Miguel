@@ -1,0 +1,32 @@
+{
+  "name": "bookstore-qa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Pruebas de API y UI de BookStore con Playwright, TypeScript y Cucumber",
+  "engines": { "node": ">=24 <25" },
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "pretest": "npm run build",
+    "test": "node scripts/ejecutar-pruebas.mjs",
+    "test:api": "npm test -- --tags @api",
+    "test:ui": "npm test -- --tags @ui",
+    "test:smoke": "npm test -- --tags @smoke",
+    "test:funcional": "npm test -- --tags \"not @book_contract\"",
+    "test:contrato": "npm test -- --tags @book_contract",
+    "test:secuencial": "npm test -- --parallel 0",
+    "test:dry": "npm run build && cucumber-js --dry-run --format summary",
+    "evidencias": "node scripts/ver-evidencias.mjs",
+    "entorno:esperar": "node scripts/esperar-entorno.mjs",
+    "navegador:instalar": "playwright install chromium"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "13.3.0",
+    "@playwright/test": "1.64.1",
+    "@types/node": "24.10.0",
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "dotenv": "17.2.3",
+    "typescript": "5.9.3"
+  }
+}

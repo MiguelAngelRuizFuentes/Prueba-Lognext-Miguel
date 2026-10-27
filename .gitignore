@@ -1,0 +1,16 @@
+node_modules/
+dist/
+reports/
+evidencia/
+.env
+.env.*
+!.env.example
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+bookstore-images/
+bookstore-qa-sandbox*/
+*.log
+.DS_Store
+Thumbs.db

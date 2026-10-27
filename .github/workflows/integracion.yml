@@ -1,0 +1,55 @@
+name: BookStore API y UI
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: bookstore-integracion
+  cancel-in-progress: false
+jobs:
+  probar:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    environment: sandbox
+    timeout-minutes: 20
+    env:
+      COMPOSE_PROJECT_NAME: bookstore-ci-${{ github.run_id }}
+      PARALELO: '3'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Descargar las imágenes desde almacenamiento privado
+        env:
+          BOOKSTORE_IMAGES_URL: ${{ secrets.BOOKSTORE_IMAGES_URL }}
+          BOOKSTORE_IMAGES_SHA256: ${{ secrets.BOOKSTORE_IMAGES_SHA256 }}
+        run: node scripts/descargar-imagenes.mjs "$RUNNER_TEMP/bookstore-images.tar"
+      - name: Cargar imágenes y levantar el entorno
+        run: |
+          docker load -i "$RUNNER_TEMP/bookstore-images.tar"
+          docker compose -f compose.yml up -d --wait --wait-timeout 120
+          npm run entorno:esperar
+      - name: Ejecutar la suite completa en paralelo
+        run: npm test
+      - name: Guardar estado del entorno
+        if: always()
+        run: |
+          mkdir -p reports
+          docker compose -f compose.yml ps -a > reports/estado-entorno.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: resultados-bookstore-${{ github.run_number }}
+          path: |
+            reports/
+            evidencia/
+          retention-days: 7
+      - name: Retirar los contenedores y el paquete temporal
+        if: always()
+        run: |
+          docker compose -f compose.yml down -v
+          rm -f "$RUNNER_TEMP/bookstore-images.tar"

@@ -1,0 +1,44 @@
+services:
+  mongo:
+    image: mongo:7
+    volumes:
+      - datos-prueba:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--quiet", "--eval", "db.adminCommand('ping').ok"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  backend:
+    image: bookstore-qa-sandbox-backend:1.0.0
+    pull_policy: never
+    depends_on:
+      mongo:
+        condition: service_healthy
+    environment:
+      PORT: 5000
+      MONGO_URI: mongodb://mongo:27017/bookstore
+      JWT_SECRET: ${JWT_SECRET:-clave-local-solo-para-la-prueba}
+      JWT_EXPIRES_IN: 2h
+      SEED_SAMPLE_BOOKS: "true"
+    ports:
+      - "127.0.0.1:5000:5000"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5000/api/health"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+  frontend:
+    image: bookstore-qa-sandbox-frontend:1.0.0
+    pull_policy: never
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "127.0.0.1:3000:80"
+
+volumes:
+  datos-prueba:
