@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: read
+  packages: read
 concurrency:
   group: bookstore-integracion
   cancel-in-progress: false
@@ -23,14 +24,17 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npx playwright install --with-deps chromium
-      - name: Descargar las imágenes desde almacenamiento privado
+      - name: Descargar imágenes privadas
         env:
-          BOOKSTORE_IMAGES_URL: ${{ secrets.BOOKSTORE_IMAGES_URL }}
-          BOOKSTORE_IMAGES_SHA256: ${{ secrets.BOOKSTORE_IMAGES_SHA256 }}
-        run: node scripts/descargar-imagenes.mjs "$RUNNER_TEMP/bookstore-images.tar"
-      - name: Cargar imágenes y levantar el entorno
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          docker load -i "$RUNNER_TEMP/bookstore-images.tar"
+          echo "$GHCR_TOKEN" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+          docker pull ghcr.io/miguelangelruizfuentes/lognext-bookstore-backend:1.0.0
+          docker pull ghcr.io/miguelangelruizfuentes/lognext-bookstore-frontend:1.0.0
+          docker tag ghcr.io/miguelangelruizfuentes/lognext-bookstore-backend:1.0.0 bookstore-qa-sandbox-backend:1.0.0
+          docker tag ghcr.io/miguelangelruizfuentes/lognext-bookstore-frontend:1.0.0 bookstore-qa-sandbox-frontend:1.0.0
+      - name: Levantar el entorno
+        run: |
           docker compose -f compose.yml up -d --wait --wait-timeout 120
           npm run entorno:esperar
       - name: Ejecutar la suite completa en paralelo
@@ -48,8 +52,7 @@ jobs:
             reports/
             evidencia/
           retention-days: 7
-      - name: Retirar los contenedores y el paquete temporal
+      - name: Retirar los contenedores
         if: always()
         run: |
           docker compose -f compose.yml down -v
-          rm -f "$RUNNER_TEMP/bookstore-images.tar"

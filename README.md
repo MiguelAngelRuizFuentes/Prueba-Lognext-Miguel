@@ -30,7 +30,7 @@ En la carpeta evidencia se puede ver el histórico. En cada ejecución se puede 
 
 Hay una acción para revisar el proyecto al subir cambios a main o crear una pull request. También hay otra para ejecutar todas las pruebas.
 
-La segunda necesita una URL privada y su hash en los secretos para descargar las imágenes. También se podría usar un registro privado o un equipo propio. Aún falta probarla en GitHub.
+La segunda descarga las imágenes privadas de GitHub Packages, levanta la aplicación y ejecuta las pruebas. El repositorio necesita permiso de lectura sobre los paquetes. Como alternativa se puede usar otro almacenamiento privado o un equipo propio. Aún falta probarla en GitHub.
 
 ## Cómo ejecutar las pruebas
 
