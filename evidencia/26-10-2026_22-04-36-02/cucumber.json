@@ -1,0 +1,80 @@
+[
+  {
+    "description": "  Como cliente de BookStore\n  Quiero gestionar mi sesión y el catálogo con respuestas consistentes\n  Para utilizar el servicio sin depender de la interfaz",
+    "elements": [
+      {
+        "description": "",
+        "id": "api-de-la-librería;a01-la-api-y-la-base-de-datos-están-disponibles",
+        "keyword": "Escenario",
+        "line": 9,
+        "name": "A01 La API y la base de datos están disponibles",
+        "steps": [
+          {
+            "result": {
+              "status": "passed",
+              "duration": 9606899
+            },
+            "keyword": "Before",
+            "hidden": true
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 23440400
+            },
+            "arguments": [],
+            "keyword": "Cuando ",
+            "line": 10,
+            "name": "consulto el estado del servicio",
+            "match": {
+              "location": "dist\\pasos\\api.pasos.js:10"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 3951400
+            },
+            "arguments": [],
+            "keyword": "Entonces ",
+            "line": 11,
+            "name": "el servicio confirma que la base de datos está disponible",
+            "match": {
+              "location": "dist\\pasos\\api.pasos.js:11"
+            }
+          },
+          {
+            "result": {
+              "status": "passed",
+              "duration": 7613699
+            },
+            "keyword": "After",
+            "hidden": true
+          }
+        ],
+        "tags": [
+          {
+            "name": "@api",
+            "line": 2
+          },
+          {
+            "name": "@smoke",
+            "line": 8
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "api-de-la-librería",
+    "line": 3,
+    "keyword": "Característica",
+    "name": "API de la librería",
+    "tags": [
+      {
+        "name": "@api",
+        "line": 2
+      }
+    ],
+    "uri": "features\\api\\servicios.feature"
+  }
+]

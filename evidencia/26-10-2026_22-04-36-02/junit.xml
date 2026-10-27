@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="0.055" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T21:04:37.315Z">
+  <testcase classname="API de la librería" name="A01 La API y la base de datos están disponibles" time="0.047">
+    <system-out><![CDATA[Cuando consulto el estado del servicio......................................passed
+Entonces el servicio confirma que la base de datos está disponible..........passed]]></system-out>
+  </testcase>
+</testsuite>

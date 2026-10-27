@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="21.662" tests="30" skipped="0" failures="2" errors="0" timestamp="2026-10-26T21:03:34.987Z">
+  <testcase classname="API de la librería" name="A01 La API y la base de datos están disponibles" time="0.011">
+    <system-out><![CDATA[Cuando consulto el estado del servicio......................................passed
+Entonces el servicio confirma que la base de datos está disponible..........passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A02 Registro, login y consulta de mi perfil" time="0.232">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando inicio sesión por API................................................passed
+Entonces la sesión y el perfil cumplen su esquema sin exponer la contraseña..passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A03 No se permite registrar dos veces el mismo correo" time="0.386">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando intento registrar otra vez el mismo usuario..........................passed
+Entonces recibo el estado 409 con el código "EMAIL_ALREADY_REGISTERED"......passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A04-A06 El registro rechaza un &lt;campo> inválido - #1.1: A04-A06 El registro rechaza un name inválido" time="0.014">
+    <system-out><![CDATA[Cuando registro un usuario con el campo "name" inválido.....................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "name".......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A04-A06 El registro rechaza un &lt;campo> inválido - #1.2: A04-A06 El registro rechaza un email inválido" time="0.018">
+    <system-out><![CDATA[Cuando registro un usuario con el campo "email" inválido....................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "email"......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A04-A06 El registro rechaza un &lt;campo> inválido - #1.3: A04-A06 El registro rechaza un password inválido" time="0.009">
+    <system-out><![CDATA[Cuando registro un usuario con el campo "password" inválido.................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "password"...................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A07 Un usuario no puede entrar con una contraseña incorrecta" time="0.409">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando inicio sesión por API con contraseña incorrecta......................passed
+Entonces recibo el estado 401 con el código "INVALID_CREDENTIALS"...........passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A08 El login exige una contraseña" time="0.02">
+    <system-out><![CDATA[Cuando envío un login sin contraseña........................................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "password"...................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A09 El catálogo requiere autenticación" time="0.091">
+    <system-out><![CDATA[Cuando consulto los libros sin token........................................passed
+Entonces recibo el estado 401 con el código "TOKEN_MISSING".................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A10 Un token manipulado no da acceso" time="0.009">
+    <system-out><![CDATA[Cuando consulto los libros con un token inválido............................passed
+Entonces recibo el estado 401 con el código "TOKEN_INVALID".................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A11 Cerrar sesión invalida el token" time="0.456">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando cierro la sesión y vuelvo a utilizar su token........................passed
+Entonces recibo el estado 401 con el código "SESSION_INVALIDATED"...........passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A12 Un segundo login invalida la sesión anterior" time="0.591">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando inicio una segunda sesión y consulto con la primera..................passed
+Entonces recibo el estado 401 con el código "SESSION_INVALIDATED"...........passed
+Y la segunda sesión sigue funcionando.......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A13 Ciclo completo de un libro con actualización parcial" time="2.974">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando creo un libro propio por API.........................................passed
+Entonces puedo consultarlo por su identificador y encontrarlo en el listado..passed
+Cuando actualizo solo su título y precio....................................passed
+Entonces los cambios persisten y el resto del libro se conserva.............passed
+Cuando elimino el libro por API.............................................passed
+Entonces el borrado devuelve 204 sin contenido y el libro ya no existe......passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A14-A16 El alta de libros valida &lt;campo> - #1.1: A14-A16 El alta de libros valida isbn" time="2.837">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando creo un libro con el campo "isbn" inválido...........................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "isbn".......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A14-A16 El alta de libros valida &lt;campo> - #1.2: A14-A16 El alta de libros valida publishedYear" time="2.88">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando creo un libro con el campo "publishedYear" inválido..................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "publishedYear"..............................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A14-A16 El alta de libros valida &lt;campo> - #1.3: A14-A16 El alta de libros valida price" time="2.974">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando creo un libro con el campo "price" inválido..........................passed
+Entonces recibo el estado 400 con el código "VALIDATION_ERROR"..............passed
+Y el error identifica el campo "price"......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A17 No se puede repetir el ISBN de otro libro" time="5.366">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Cuando intento crear otro libro con el mismo ISBN...........................passed
+Entonces recibo el estado 409 con el código "DUPLICATE_ISBN"................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A18-A19 La consulta distingue un identificador &lt;tipo> - #1.1: A18-A19 La consulta distingue un identificador malformado" time="0.452">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando consulto un identificador "malformado"...............................passed
+Entonces recibo el estado 400 con el código "INVALID_ID"....................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A18-A19 La consulta distingue un identificador &lt;tipo> - #1.2: A18-A19 La consulta distingue un identificador inexistente" time="0.221">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Cuando consulto un identificador "inexistente"..............................passed
+Entonces recibo el estado 404 con el código "BOOK_NOT_FOUND"................passed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A20 El identificador del libro cumple el contrato publicado" time="2.747">
+    <failure type="ExpectError" message="identificadorDocumentado: data must have required property 'bookId'&#xA;&#xA;expect(received).toBe(expected) // Object.is equality&#xA;&#xA;Expected: true&#xA;Received: false"><![CDATA[Error: identificadorDocumentado: data must have required property 'bookId'
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+    at captureRawStack (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright-core\lib\coreBundle.js:9282:17)
+    at callMatcherAsStep (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright\lib\matchers\expect.js:13316:57)
+    at Object.toBe (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright\lib\matchers\expect.js:13308:23)
+    at validarEsquema (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\dist\contratos\esquemas.js:48:88)
+    at Mundo.<anonymous> (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\dist\pasos\api.pasos.js:127:35)]]></failure>
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Entonces Swagger exige bookId y la respuesta incluye ese campo..............failed]]></system-out>
+  </testcase>
+  <testcase classname="API de la librería" name="A21 El precio del libro cumple el contrato publicado" time="2.772">
+    <failure type="ExpectError" message="precioDocumentado: data/price must be string&#xA;&#xA;expect(received).toBe(expected) // Object.is equality&#xA;&#xA;Expected: true&#xA;Received: false"><![CDATA[Error: precioDocumentado: data/price must be string
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: true
+Received: false
+    at captureRawStack (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright-core\lib\coreBundle.js:9282:17)
+    at callMatcherAsStep (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright\lib\matchers\expect.js:13316:57)
+    at Object.toBe (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\node_modules\playwright\lib\matchers\expect.js:13308:23)
+    at validarEsquema (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\dist\contratos\esquemas.js:48:88)
+    at Mundo.<anonymous> (C:\Users\migue\Documents\Codex\2026-10-26\vale-me-han-pedido-que-desarrolle\outputs\prueba Técnica Miguel\dist\pasos\api.pasos.js:135:35)]]></failure>
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Entonces Swagger define price como texto y la respuesta contiene dos decimales..failed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U01 Inicio de sesión desde el formulario real" time="1.465">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando inicio sesión desde la interfaz......................................passed
+Entonces veo mi nombre y correo en el catálogo..............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U02 La interfaz informa de una contraseña incorrecta" time="2.342">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando intento entrar desde la interfaz con contraseña incorrecta...........passed
+Entonces veo el error de credenciales y sigo en el login....................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U03 Registro desde la interfaz y acceso con el usuario creado" time="0.72">
+    <system-out><![CDATA[Cuando registro mi usuario desde la interfaz................................passed
+Y inicio sesión desde la interfaz...........................................passed
+Entonces veo mi nombre y correo en el catálogo..............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U04 El catálogo redirige al login si no hay sesión" time="1.746">
+    <system-out><![CDATA[Cuando abro el catálogo sin iniciar sesión..................................passed
+Entonces estoy en la pantalla de login......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U05 Un libro creado por API aparece al buscarlo en la web" time="3.569">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Cuando inicio sesión desde la interfaz......................................passed
+Y busco mi libro por ISBN...................................................passed
+Entonces solo aparece mi libro con los datos guardados......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U06 Un libro creado en la web queda guardado en la API" time="3.912">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando creo mi libro desde la interfaz......................................passed
+Entonces la API devuelve los mismos datos del libro.........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U07 La edición en la web persiste en la API" time="4.062">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cambio el título y precio desde la interfaz..........................passed
+Entonces la API devuelve los mismos datos del libro.........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U08 Cancelar un borrado conserva el libro y confirmarlo lo elimina" time="5.273">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cancelo el borrado desde la interfaz.................................passed
+Entonces la API devuelve los mismos datos del libro.........................passed
+Cuando confirmo el borrado desde la interfaz................................passed
+Entonces el libro desaparece de la web y de la API..........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U09 Cerrar sesión impide volver al catálogo" time="1.228">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cierro sesión desde la interfaz......................................passed
+Y vuelvo a abrir el catálogo................................................passed
+Entonces estoy en la pantalla de login......................................passed
+Y el token de la interfaz ya no da acceso a la API..........................passed]]></system-out>
+  </testcase>
+</testsuite>

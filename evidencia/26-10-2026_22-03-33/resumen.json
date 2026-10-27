@@ -1,0 +1,280 @@
+{
+  "fechaInicio": "2026-10-26T21:03:33.901Z",
+  "identificador": "26-10-2026_22-03-33",
+  "total": 30,
+  "correctos": 28,
+  "fallidos": 2,
+  "otros": 0,
+  "casos": [
+    {
+      "nombre": "A01 La API y la base de datos están disponibles",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 0.010342496,
+      "archivo": "01-a01-la-api-y-la-base-de-datos-estan-disponibles.html"
+    },
+    {
+      "nombre": "A02 Registro, login y consulta de mi perfil",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 14,
+      "estado": "passed",
+      "duracionSegundos": 0.232122099,
+      "archivo": "02-a02-registro-login-y-consulta-de-mi-perfil.html"
+    },
+    {
+      "nombre": "A03 No se permite registrar dos veces el mismo correo",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 19,
+      "estado": "passed",
+      "duracionSegundos": 0.385461496,
+      "archivo": "03-a03-no-se-permite-registrar-dos-veces-el-mismo-correo.html"
+    },
+    {
+      "nombre": "A04-A06 El registro rechaza un name inválido",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 30,
+      "estado": "passed",
+      "duracionSegundos": 0.013337898,
+      "archivo": "04-a04-a06-el-registro-rechaza-un-name-invalido.html"
+    },
+    {
+      "nombre": "A04-A06 El registro rechaza un email inválido",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 31,
+      "estado": "passed",
+      "duracionSegundos": 0.017115998,
+      "archivo": "05-a04-a06-el-registro-rechaza-un-email-invalido.html"
+    },
+    {
+      "nombre": "A04-A06 El registro rechaza un password inválido",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 32,
+      "estado": "passed",
+      "duracionSegundos": 0.008351898,
+      "archivo": "06-a04-a06-el-registro-rechaza-un-password-invalido.html"
+    },
+    {
+      "nombre": "A07 Un usuario no puede entrar con una contraseña incorrecta",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 34,
+      "estado": "passed",
+      "duracionSegundos": 0.408976998,
+      "archivo": "07-a07-un-usuario-no-puede-entrar-con-una-contrasena-incorrecta.html"
+    },
+    {
+      "nombre": "A08 El login exige una contraseña",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 39,
+      "estado": "passed",
+      "duracionSegundos": 0.018794099,
+      "archivo": "08-a08-el-login-exige-una-contrasena.html"
+    },
+    {
+      "nombre": "A09 El catálogo requiere autenticación",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 44,
+      "estado": "passed",
+      "duracionSegundos": 0.090271399,
+      "archivo": "09-a09-el-catalogo-requiere-autenticacion.html"
+    },
+    {
+      "nombre": "A10 Un token manipulado no da acceso",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 48,
+      "estado": "passed",
+      "duracionSegundos": 0.008876898,
+      "archivo": "10-a10-un-token-manipulado-no-da-acceso.html"
+    },
+    {
+      "nombre": "A11 Cerrar sesión invalida el token",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 52,
+      "estado": "passed",
+      "duracionSegundos": 0.455294099,
+      "archivo": "11-a11-cerrar-sesion-invalida-el-token.html"
+    },
+    {
+      "nombre": "A12 Un segundo login invalida la sesión anterior",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 57,
+      "estado": "passed",
+      "duracionSegundos": 0.589057497,
+      "archivo": "12-a12-un-segundo-login-invalida-la-sesion-anterior.html"
+    },
+    {
+      "nombre": "A13 Ciclo completo de un libro con actualización parcial",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 64,
+      "estado": "passed",
+      "duracionSegundos": 2.973780995,
+      "archivo": "13-a13-ciclo-completo-de-un-libro-con-actualizacion-parcial.html"
+    },
+    {
+      "nombre": "A14-A16 El alta de libros valida isbn",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 80,
+      "estado": "passed",
+      "duracionSegundos": 2.836474996,
+      "archivo": "14-a14-a16-el-alta-de-libros-valida-isbn.html"
+    },
+    {
+      "nombre": "A14-A16 El alta de libros valida publishedYear",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 81,
+      "estado": "passed",
+      "duracionSegundos": 2.879456196,
+      "archivo": "15-a14-a16-el-alta-de-libros-valida-publishedyear.html"
+    },
+    {
+      "nombre": "A14-A16 El alta de libros valida price",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 82,
+      "estado": "passed",
+      "duracionSegundos": 2.971290098,
+      "archivo": "16-a14-a16-el-alta-de-libros-valida-price.html"
+    },
+    {
+      "nombre": "A17 No se puede repetir el ISBN de otro libro",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 84,
+      "estado": "passed",
+      "duracionSegundos": 5.364926998,
+      "archivo": "17-a17-no-se-puede-repetir-el-isbn-de-otro-libro.html"
+    },
+    {
+      "nombre": "A18-A19 La consulta distingue un identificador malformado",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 96,
+      "estado": "passed",
+      "duracionSegundos": 0.452065597,
+      "archivo": "18-a18-a19-la-consulta-distingue-un-identificador-malformado.html"
+    },
+    {
+      "nombre": "A18-A19 La consulta distingue un identificador inexistente",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 97,
+      "estado": "passed",
+      "duracionSegundos": 0.221081195,
+      "archivo": "19-a18-a19-la-consulta-distingue-un-identificador-inexistente.html"
+    },
+    {
+      "nombre": "A20 El identificador del libro cumple el contrato publicado",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 100,
+      "estado": "failed",
+      "duracionSegundos": 2.746793298,
+      "archivo": "20-a20-el-identificador-del-libro-cumple-el-contrato-publicado.html"
+    },
+    {
+      "nombre": "A21 El precio del libro cumple el contrato publicado",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 106,
+      "estado": "failed",
+      "duracionSegundos": 2.771269098,
+      "archivo": "21-a21-el-precio-del-libro-cumple-el-contrato-publicado.html"
+    },
+    {
+      "nombre": "U01 Inicio de sesión desde el formulario real",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 1.463489897,
+      "archivo": "22-u01-inicio-de-sesion-desde-el-formulario-real.html"
+    },
+    {
+      "nombre": "U02 La interfaz informa de una contraseña incorrecta",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 14,
+      "estado": "passed",
+      "duracionSegundos": 2.340825296,
+      "archivo": "23-u02-la-interfaz-informa-de-una-contrasena-incorrecta.html"
+    },
+    {
+      "nombre": "U03 Registro desde la interfaz y acceso con el usuario creado",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 19,
+      "estado": "passed",
+      "duracionSegundos": 0.719295597,
+      "archivo": "24-u03-registro-desde-la-interfaz-y-acceso-con-el-usuario-creado.html"
+    },
+    {
+      "nombre": "U04 El catálogo redirige al login si no hay sesión",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 24,
+      "estado": "passed",
+      "duracionSegundos": 1.744545299,
+      "archivo": "25-u04-el-catalogo-redirige-al-login-si-no-hay-sesion.html"
+    },
+    {
+      "nombre": "U05 Un libro creado por API aparece al buscarlo en la web",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 29,
+      "estado": "passed",
+      "duracionSegundos": 3.567844595,
+      "archivo": "26-u05-un-libro-creado-por-api-aparece-al-buscarlo-en-la-web.html"
+    },
+    {
+      "nombre": "U06 Un libro creado en la web queda guardado en la API",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 36,
+      "estado": "passed",
+      "duracionSegundos": 3.911420796,
+      "archivo": "27-u06-un-libro-creado-en-la-web-queda-guardado-en-la-api.html"
+    },
+    {
+      "nombre": "U07 La edición en la web persiste en la API",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 42,
+      "estado": "passed",
+      "duracionSegundos": 4.061236799,
+      "archivo": "28-u07-la-edicion-en-la-web-persiste-en-la-api.html"
+    },
+    {
+      "nombre": "U08 Cancelar un borrado conserva el libro y confirmarlo lo elimina",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 49,
+      "estado": "passed",
+      "duracionSegundos": 5.271417694,
+      "archivo": "29-u08-cancelar-un-borrado-conserva-el-libro-y-confirmarlo-lo-elimina.html"
+    },
+    {
+      "nombre": "U09 Cerrar sesión impide volver al catálogo",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 58,
+      "estado": "passed",
+      "duracionSegundos": 1.227403597,
+      "archivo": "30-u09-cerrar-sesion-impide-volver-al-catalogo.html"
+    }
+  ]
+}

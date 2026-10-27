@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="22.756" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-26T22:27:07.111Z">
+  <testcase classname="Gestión del catálogo desde el navegador" name="U01 Inicio de sesión desde el formulario real" time="5.075">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando inicio sesión desde la interfaz......................................passed
+Entonces veo mi nombre y correo en el catálogo..............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U02 La interfaz informa de una contraseña incorrecta" time="5.082">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Cuando intento entrar desde la interfaz con contraseña incorrecta...........passed
+Entonces veo el error de credenciales y sigo en el login....................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U03 Registro desde la interfaz y acceso con el usuario creado" time="5.097">
+    <system-out><![CDATA[Cuando registro mi usuario desde la interfaz................................passed
+Y inicio sesión desde la interfaz...........................................passed
+Entonces veo mi nombre y correo en el catálogo..............................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U04 El catálogo redirige al login si no hay sesión" time="4.621">
+    <system-out><![CDATA[Cuando abro el catálogo sin iniciar sesión..................................passed
+Entonces estoy en la pantalla de login......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U05 Un libro creado por API aparece al buscarlo en la web" time="5.106">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Cuando inicio sesión desde la interfaz......................................passed
+Y busco mi libro por ISBN...................................................passed
+Entonces solo aparece mi libro con los datos guardados......................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U06 Un libro creado en la web queda guardado en la API" time="5.092">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando creo mi libro desde la interfaz......................................passed
+Entonces la API devuelve los mismos datos del libro.........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U07 La edición en la web persiste en la API" time="4.477">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cambio el título y precio desde la interfaz..........................passed
+Entonces la API devuelve los mismos datos del libro.........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U08 Cancelar un borrado conserva el libro y confirmarlo lo elimina" time="6.528">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cancelo el borrado desde la interfaz.................................passed
+Entonces la API devuelve los mismos datos del libro.........................passed
+Cuando confirmo el borrado desde la interfaz................................passed
+Entonces el libro desaparece de la web y de la API..........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U09 Cerrar sesión impide volver al catálogo" time="6.515">
+    <system-out><![CDATA[Dado un usuario nuevo registrado por API....................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando cierro sesión desde la interfaz......................................passed
+Y vuelvo a abrir el catálogo................................................passed
+Entonces estoy en la pantalla de login......................................passed
+Y el token de la interfaz ya no da acceso a la API..........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U10 El registro avisa si las contraseñas no coinciden" time="1.309">
+    <system-out><![CDATA[Cuando intento registrarme con dos contraseñas distintas....................passed
+Entonces veo el error de confirmación y sigo en el registro.................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U11 La búsqueda muestra un aviso cuando no encuentra libros" time="1.823">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando busco un ISBN que no existe..........................................passed
+Entonces el catálogo muestra que no hay resultados..........................passed]]></system-out>
+  </testcase>
+  <testcase classname="Gestión del catálogo desde el navegador" name="U12 Cancelar una edición conserva el libro original" time="4.258">
+    <system-out><![CDATA[Dado un usuario autenticado por API.........................................passed
+Y un libro propio creado por API............................................passed
+Y una sesión iniciada desde la interfaz.....................................passed
+Cuando modifico el título y cancelo la edición..............................passed
+Entonces el libro mantiene sus datos en la web y en la API..................passed]]></system-out>
+  </testcase>
+</testsuite>

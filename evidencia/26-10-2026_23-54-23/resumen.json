@@ -1,0 +1,307 @@
+{
+  "fechaInicio": "2026-10-26T22:54:23.087Z",
+  "identificador": "26-10-2026_23-54-23",
+  "total": 33,
+  "correctos": 31,
+  "fallidos": 2,
+  "otros": 0,
+  "casos": [
+    {
+      "nombre": "A01 The API and database are available",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 0.047262096,
+      "archivo": "01-a01-the-api-and-database-are-available.html"
+    },
+    {
+      "nombre": "A02 Registration, login and profile retrieval",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 14,
+      "estado": "passed",
+      "duracionSegundos": 0.471734497,
+      "archivo": "02-a02-registration-login-and-profile-retrieval.html"
+    },
+    {
+      "nombre": "A03 The same email cannot be registered twice",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 19,
+      "estado": "passed",
+      "duracionSegundos": 0.458453295,
+      "archivo": "03-a03-the-same-email-cannot-be-registered-twice.html"
+    },
+    {
+      "nombre": "A04-A06 Registration rejects an invalid name",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 30,
+      "estado": "passed",
+      "duracionSegundos": 0.124880797,
+      "archivo": "04-a04-a06-registration-rejects-an-invalid-name.html"
+    },
+    {
+      "nombre": "A04-A06 Registration rejects an invalid email",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 31,
+      "estado": "passed",
+      "duracionSegundos": 0.074615095,
+      "archivo": "05-a04-a06-registration-rejects-an-invalid-email.html"
+    },
+    {
+      "nombre": "A04-A06 Registration rejects an invalid password",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 32,
+      "estado": "passed",
+      "duracionSegundos": 0.011522498,
+      "archivo": "06-a04-a06-registration-rejects-an-invalid-password.html"
+    },
+    {
+      "nombre": "A07 A user cannot log in with the wrong password",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 34,
+      "estado": "passed",
+      "duracionSegundos": 0.479876295,
+      "archivo": "07-a07-a-user-cannot-log-in-with-the-wrong-password.html"
+    },
+    {
+      "nombre": "A08 Login requires a password",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 39,
+      "estado": "passed",
+      "duracionSegundos": 0.116536396,
+      "archivo": "08-a08-login-requires-a-password.html"
+    },
+    {
+      "nombre": "A09 The book catalog requires authentication",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 44,
+      "estado": "passed",
+      "duracionSegundos": 0.108043397,
+      "archivo": "09-a09-the-book-catalog-requires-authentication.html"
+    },
+    {
+      "nombre": "A10 A tampered token cannot access the books",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 48,
+      "estado": "passed",
+      "duracionSegundos": 0.099209797,
+      "archivo": "10-a10-a-tampered-token-cannot-access-the-books.html"
+    },
+    {
+      "nombre": "A11 Logout invalidates the token",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 52,
+      "estado": "passed",
+      "duracionSegundos": 0.618523196,
+      "archivo": "11-a11-logout-invalidates-the-token.html"
+    },
+    {
+      "nombre": "A12 A second login invalidates the previous session",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 57,
+      "estado": "passed",
+      "duracionSegundos": 0.650627297,
+      "archivo": "12-a12-a-second-login-invalidates-the-previous-session.html"
+    },
+    {
+      "nombre": "A13 Complete book lifecycle with a partial update",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 64,
+      "estado": "passed",
+      "duracionSegundos": 3.07175479,
+      "archivo": "13-a13-complete-book-lifecycle-with-a-partial-update.html"
+    },
+    {
+      "nombre": "A14-A16 Book creation validates isbn",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 80,
+      "estado": "passed",
+      "duracionSegundos": 2.832288497,
+      "archivo": "14-a14-a16-book-creation-validates-isbn.html"
+    },
+    {
+      "nombre": "A14-A16 Book creation validates publishedYear",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 81,
+      "estado": "passed",
+      "duracionSegundos": 2.908040197,
+      "archivo": "15-a14-a16-book-creation-validates-publishedyear.html"
+    },
+    {
+      "nombre": "A14-A16 Book creation validates price",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 82,
+      "estado": "passed",
+      "duracionSegundos": 2.794154095,
+      "archivo": "16-a14-a16-book-creation-validates-price.html"
+    },
+    {
+      "nombre": "A17 An ISBN cannot be used twice",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 84,
+      "estado": "passed",
+      "duracionSegundos": 5.416753397,
+      "archivo": "17-a17-an-isbn-cannot-be-used-twice.html"
+    },
+    {
+      "nombre": "A18-A19 Book lookup distinguishes a malformed identifier",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 96,
+      "estado": "passed",
+      "duracionSegundos": 0.214828095,
+      "archivo": "18-a18-a19-book-lookup-distinguishes-a-malformed-identifier.html"
+    },
+    {
+      "nombre": "A18-A19 Book lookup distinguishes a missing identifier",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 97,
+      "estado": "passed",
+      "duracionSegundos": 0.230217796,
+      "archivo": "19-a18-a19-book-lookup-distinguishes-a-missing-identifier.html"
+    },
+    {
+      "nombre": "A20 The book identifier matches the published contract",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 100,
+      "estado": "failed",
+      "duracionSegundos": 2.768320593,
+      "archivo": "20-a20-the-book-identifier-matches-the-published-contract.html"
+    },
+    {
+      "nombre": "A21 The book price matches the published contract",
+      "caracteristica": "BookStore API",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 106,
+      "estado": "failed",
+      "duracionSegundos": 2.853484799,
+      "archivo": "21-a21-the-book-price-matches-the-published-contract.html"
+    },
+    {
+      "nombre": "U01 Login through the real form",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 5.681593894,
+      "archivo": "22-u01-login-through-the-real-form.html"
+    },
+    {
+      "nombre": "U02 The interface reports an incorrect password",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 14,
+      "estado": "passed",
+      "duracionSegundos": 4.448135696,
+      "archivo": "23-u02-the-interface-reports-an-incorrect-password.html"
+    },
+    {
+      "nombre": "U03 Register through the interface and log in",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 19,
+      "estado": "passed",
+      "duracionSegundos": 4.437599093,
+      "archivo": "24-u03-register-through-the-interface-and-log-in.html"
+    },
+    {
+      "nombre": "U04 The catalog redirects unauthenticated users to login",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 24,
+      "estado": "passed",
+      "duracionSegundos": 1.623681898,
+      "archivo": "25-u04-the-catalog-redirects-unauthenticated-users-to-login.html"
+    },
+    {
+      "nombre": "U05 A book created through the API appears in web search",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 29,
+      "estado": "passed",
+      "duracionSegundos": 4.729824495,
+      "archivo": "26-u05-a-book-created-through-the-api-appears-in-web-search.html"
+    },
+    {
+      "nombre": "U06 A book created on the website is saved in the API",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 36,
+      "estado": "passed",
+      "duracionSegundos": 4.723493594,
+      "archivo": "27-u06-a-book-created-on-the-website-is-saved-in-the-api.html"
+    },
+    {
+      "nombre": "U07 Edits made on the website persist in the API",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 42,
+      "estado": "passed",
+      "duracionSegundos": 4.816241193,
+      "archivo": "28-u07-edits-made-on-the-website-persist-in-the-api.html"
+    },
+    {
+      "nombre": "U08 Canceling deletion keeps the book and confirming it removes it",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 49,
+      "estado": "passed",
+      "duracionSegundos": 6.919009992,
+      "archivo": "29-u08-canceling-deletion-keeps-the-book-and-confirming-it-removes-it.html"
+    },
+    {
+      "nombre": "U09 Logout prevents returning to the catalog",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 58,
+      "estado": "passed",
+      "duracionSegundos": 6.911823194,
+      "archivo": "30-u09-logout-prevents-returning-to-the-catalog.html"
+    },
+    {
+      "nombre": "U10 Registration warns when passwords do not match",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 66,
+      "estado": "passed",
+      "duracionSegundos": 1.380470698,
+      "archivo": "31-u10-registration-warns-when-passwords-do-not-match.html"
+    },
+    {
+      "nombre": "U11 Search shows a message when no books match",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 70,
+      "estado": "passed",
+      "duracionSegundos": 1.206563892,
+      "archivo": "32-u11-search-shows-a-message-when-no-books-match.html"
+    },
+    {
+      "nombre": "U12 Canceling an edit preserves the original book",
+      "caracteristica": "Book catalog in the browser",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 76,
+      "estado": "passed",
+      "duracionSegundos": 4.557766195,
+      "archivo": "33-u12-canceling-an-edit-preserves-the-original-book.html"
+    }
+  ]
+}

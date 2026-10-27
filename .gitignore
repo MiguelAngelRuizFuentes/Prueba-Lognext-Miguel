@@ -1,7 +1,6 @@
 node_modules/
 dist/
 reports/
-evidencia/
 .env
 .env.*
 !.env.example
@@ -9,6 +8,7 @@ evidencia/
 *.tar.gz
 *.tgz
 *.zip
+!evidencia/**/*.zip
 bookstore-images/
 bookstore-qa-sandbox*/
 *.log

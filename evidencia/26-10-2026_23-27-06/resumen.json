@@ -1,0 +1,118 @@
+{
+  "fechaInicio": "2026-10-26T22:27:06.172Z",
+  "identificador": "26-10-2026_23-27-06",
+  "total": 12,
+  "correctos": 12,
+  "fallidos": 0,
+  "otros": 0,
+  "casos": [
+    {
+      "nombre": "U01 Inicio de sesión desde el formulario real",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 5.073026998,
+      "archivo": "01-u01-inicio-de-sesion-desde-el-formulario-real.html"
+    },
+    {
+      "nombre": "U02 La interfaz informa de una contraseña incorrecta",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 14,
+      "estado": "passed",
+      "duracionSegundos": 5.078831297,
+      "archivo": "02-u02-la-interfaz-informa-de-una-contrasena-incorrecta.html"
+    },
+    {
+      "nombre": "U03 Registro desde la interfaz y acceso con el usuario creado",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 19,
+      "estado": "passed",
+      "duracionSegundos": 5.094196196,
+      "archivo": "03-u03-registro-desde-la-interfaz-y-acceso-con-el-usuario-creado.html"
+    },
+    {
+      "nombre": "U04 El catálogo redirige al login si no hay sesión",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 24,
+      "estado": "passed",
+      "duracionSegundos": 4.620220798,
+      "archivo": "04-u04-el-catalogo-redirige-al-login-si-no-hay-sesion.html"
+    },
+    {
+      "nombre": "U05 Un libro creado por API aparece al buscarlo en la web",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 29,
+      "estado": "passed",
+      "duracionSegundos": 5.103735495,
+      "archivo": "05-u05-un-libro-creado-por-api-aparece-al-buscarlo-en-la-web.html"
+    },
+    {
+      "nombre": "U06 Un libro creado en la web queda guardado en la API",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 36,
+      "estado": "passed",
+      "duracionSegundos": 5.090492695,
+      "archivo": "06-u06-un-libro-creado-en-la-web-queda-guardado-en-la-api.html"
+    },
+    {
+      "nombre": "U07 La edición en la web persiste en la API",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 42,
+      "estado": "passed",
+      "duracionSegundos": 4.476653296,
+      "archivo": "07-u07-la-edicion-en-la-web-persiste-en-la-api.html"
+    },
+    {
+      "nombre": "U08 Cancelar un borrado conserva el libro y confirmarlo lo elimina",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 49,
+      "estado": "passed",
+      "duracionSegundos": 6.526404291,
+      "archivo": "08-u08-cancelar-un-borrado-conserva-el-libro-y-confirmarlo-lo-elimina.html"
+    },
+    {
+      "nombre": "U09 Cerrar sesión impide volver al catálogo",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 58,
+      "estado": "passed",
+      "duracionSegundos": 6.513260595,
+      "archivo": "09-u09-cerrar-sesion-impide-volver-al-catalogo.html"
+    },
+    {
+      "nombre": "U10 El registro avisa si las contraseñas no coinciden",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 66,
+      "estado": "passed",
+      "duracionSegundos": 1.308783894,
+      "archivo": "10-u10-el-registro-avisa-si-las-contrasenas-no-coinciden.html"
+    },
+    {
+      "nombre": "U11 La búsqueda muestra un aviso cuando no encuentra libros",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 70,
+      "estado": "passed",
+      "duracionSegundos": 1.822591295,
+      "archivo": "11-u11-la-busqueda-muestra-un-aviso-cuando-no-encuentra-libros.html"
+    },
+    {
+      "nombre": "U12 Cancelar una edición conserva el libro original",
+      "caracteristica": "Gestión del catálogo desde el navegador",
+      "origen": "features\\ui\\interfaz.feature",
+      "linea": 76,
+      "estado": "passed",
+      "duracionSegundos": 4.257507394,
+      "archivo": "12-u12-cancelar-una-edicion-conserva-el-libro-original.html"
+    }
+  ]
+}

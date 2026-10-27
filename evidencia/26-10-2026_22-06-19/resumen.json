@@ -1,0 +1,19 @@
+{
+  "fechaInicio": "2026-10-26T21:06:19.774Z",
+  "identificador": "26-10-2026_22-06-19",
+  "total": 1,
+  "correctos": 1,
+  "fallidos": 0,
+  "otros": 0,
+  "casos": [
+    {
+      "nombre": "A01 La API y la base de datos están disponibles",
+      "caracteristica": "API de la librería",
+      "origen": "features\\api\\servicios.feature",
+      "linea": 9,
+      "estado": "passed",
+      "duracionSegundos": 0.032975398,
+      "archivo": "01-a01-la-api-y-la-base-de-datos-estan-disponibles.html"
+    }
+  ]
+}
